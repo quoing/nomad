@@ -237,7 +237,7 @@ func (sv *SecureVariables) Read(args *structs.SecureVariablesReadRequest, reply 
 				reply.Data = &ov
 				reply.Index = out.ModifyIndex
 			} else {
-				sv.srv.replySetIndex(state.TableSecureVariables, &reply.QueryMeta)
+				sv.srv.setReplyQueryMeta(s, state.TableSecureVariables, &reply.QueryMeta)
 			}
 			return nil
 		}}
@@ -263,9 +263,6 @@ func (sv *SecureVariables) List(
 
 	aclObj, err := sv.handleMixedAuthEndpoint(args.QueryOptions,
 		acl.PolicyList, args.Prefix)
-	if err != nil {
-		return err
-	}
 	if err != nil {
 		return err
 	}
