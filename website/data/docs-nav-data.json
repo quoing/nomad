@@ -253,6 +253,26 @@
             "path": "commands/acl/policy-list"
           },
           {
+            "title": "role create",
+            "path": "commands/acl/role-create"
+          },
+          {
+            "title": "role delete",
+            "path": "commands/acl/role-delete"
+          },
+          {
+            "title": "role info",
+            "path": "commands/acl/role-info"
+          },
+          {
+            "title": "role list",
+            "path": "commands/acl/role-list"
+          },
+          {
+            "title": "role update",
+            "path": "commands/acl/role-update"
+          },
+          {
             "title": "token create",
             "path": "commands/acl/token-create"
           },
